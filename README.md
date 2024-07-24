@@ -26,7 +26,7 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
     - Define the routes for data submission and retrieval.
 3. **Implement Authentication Mechanism**
     - Use WordPress's built-in authentication methods or create a custom authentication handler (an authentication plugin can be used to reduce development time)
-    - Ensure that authentication is required for accessing the APIs.
+    - Ensure that authentication is required to access the APIs.
 4. **Handle Form Submission**
     - Create an endpoint to receive form data from a form
     - Validate the incoming data for required fields and correct format.
@@ -43,7 +43,7 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
     - Provide clear documentation for the APIs, including endpoint URLs, required parameters, and sample requests and responses.
   
 9. **Submission:**
-    - **Code Repository**: Push your project to a GitHub repository owned by you, and add  idteam-at-onecom as a collaborator in that repo.
+    - **Code Repository**: Push your project to a GitHub repository you own, and add  idteam-at-onecom as a collaborator in that repo.
     - **Live Demo**: Live demo during the panel interview
     - **README**: Include a README file in your repository with:
       - A brief description of your project.
@@ -55,7 +55,7 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
 
 Q: Where do I have to solve the assignment?
 
-A: Implement it on your local system or use any virtual server on cloud/VPS, etc. We will need this system again during panel interview, so do not destroy your work.
+A: Implement it on your local system or use any virtual server on cloud/VPS, etc. We will need this system again during the panel interview, so do not destroy your work.
 
 Q: Do I have to use a particular operating system?
 
