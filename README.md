@@ -41,6 +41,14 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
     - Ensure data is correctly validated, stored, and retrieved as per the specifications.
 8. **Documentation**
     - Provide clear documentation for the APIs, including endpoint URLs, required parameters, and sample requests and responses.
+  
+9. **Submission:**
+    - **Code Repository**: Push your project to a GitHub repository owned by you, and add  idteam-at-onecom as a collaborator in that repo.
+    - **Live Demo**: Live demo during the panel interview
+    - **README**: Include a README file in your repository with:
+      - A brief description of your project.
+      - Instructions on how to run the project locally.
+      - Are there any additional notes or features you implemented?
 
 
 ## FAQs
