@@ -31,7 +31,7 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
     - Create an endpoint to receive form data from a form
     - Validate the incoming data for required fields and correct format.
 5. **Data Validation and Storage**
-    - On successful validation, store the data in a custom database table or as custom post types.
+    - On successful validation, store the data in a custom database table along with required database constraints.
     - Provide appropriate error messages for validation failures.
 6. **Fetch Stored Data**
     - Create an endpoint to fetch the stored data.
