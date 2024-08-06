@@ -20,15 +20,15 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
 
 1. **Setup WordPress Plugin**
     - Create a new plugin folder in the  wp-content/plugins directory.
-    - Inside the folder, create a main PHP file (e.g.,  custom-api-plugin.php ) and add the plugin header information.
+    - Create a main PHP file inside the folder and add the plugin header information.
 2. **Register Custom Namespace for REST APIs**
-    - Use the  register\_rest\_route function to create a custom namespace (e.g.,  custom/v1 ).
+    - Use the  register\_rest\_route function to create a custom namespace.
     - Define the routes for data submission and retrieval.
 3. **Implement Authentication Mechanism**
-    - Use WordPress's built-in authentication methods or create a custom authentication handler (an authentication plugin can be used to reduce development time)
+    - create a custom authentication handler (an authentication plugin can be used to reduce development time)
     - Ensure that authentication is required to access the APIs.
 4. **Handle Form Submission**
-    - Create an endpoint to receive form data from a form
+    - Create an endpoint to receive form data from a form/API call
     - Validate the incoming data for required fields and correct format.
 5. **Data Validation and Storage**
     - On successful validation, store the data in a custom database table along with required database constraints.
@@ -49,13 +49,18 @@ Create a WordPress plugin to set up a custom namespace for REST APIs. Implement 
       - A brief description of your project.
       - Instructions on how to run the project locally.
       - Are there any additional notes or features you implemented?
+     
+10. **Requirements**
+    - Please make an effort to use custom PHP code instead of relying on WordPress built-in functions whenever it's feasible.
+    - Auth mechanisms are required like Basic auth/JWT do not use is_user_logged_in()
+
 
 
 ## FAQs
 
 Q: Where do I have to solve the assignment?
 
-A: Implement it on your local system or use any virtual server on cloud/VPS, etc. We will need this system again during the panel interview, so do not destroy your work.
+A: Implement it on your local system or use any virtual server on the cloud/VPS, etc. We will need this system again during the panel interview, so do not destroy your work.
 
 Q: Do I have to use a particular operating system?
 
