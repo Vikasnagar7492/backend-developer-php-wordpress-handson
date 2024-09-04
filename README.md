@@ -10,50 +10,39 @@
 ```
 
 ## Assignment
-**Custom Namespace REST APIs with Authentication in WordPress+PHP**
 
-**Objective**
+**Objective** - To develop a WordPress plugin to implement REST APIs
 
-Create a WordPress plugin to set up a custom namespace for REST APIs. Implement an authentication mechanism for these APIs, handle data submission from a third-party form, validate and store the data, and provide endpoints to fetch the stored data.
+### Instructions
 
-**Instructions**
-
-1. **Setup WordPress Plugin**
-    - Create a new plugin folder in the  wp-content/plugins directory.
-    - Create a main PHP file inside the folder and add the plugin header information.
-2. **Register Custom Namespace for REST APIs**
-    - Use the  register\_rest\_route function to create a custom namespace.
-    - Define the routes for data submission and retrieval.
-3. **Implement Authentication Mechanism**
-    - create a custom authentication handler (an authentication plugin can be used to reduce development time)
-    - Ensure that authentication is required to access the APIs.
-4. **Handle Form Submission**
-    - Create an endpoint to receive form data from a form/API call
-    - Validate the incoming data for required fields and correct format.
-5. **Data Validation and Storage**
-    - On successful validation, store the data in a custom database table along with required database constraints.
-    - Do not use the default $WPDB object for DB queries use custom queries instead. Make sure the queries should be secure.
-    - Provide appropriate error messages for validation failures.
-6. **Fetch Stored Data**
-    - Create an endpoint to fetch the stored data.
-    - Ensure that only authenticated requests can access the data.
-7. **Testing**
-    - Test the endpoints using tools like Postman.
-    - Ensure data is correctly validated, stored, and retrieved as per the specifications.
-8. **Documentation**
-    - Provide clear documentation for the APIs, including endpoint URLs, required parameters, and sample requests and responses.
-  
-9. **Submission:**
-    - **Code Repository**: Push your project to a GitHub repository you own, and add  idteam-at-onecom as a collaborator in that repo.
-    - **Live Demo**: Live demo during the panel interview
-    - **README**: Include a README file in your repository with:
-      - A brief description of your project.
-      - Instructions on how to run the project locally.
-      - Are there any additional notes or features you implemented?
-     
-10. **Requirements**
-    - Please make an effort to use custom PHP code instead of relying on WordPress built-in functions whenever it's feasible.
-    - Auth mechanisms are required like Basic auth/JWT do not use is_user_logged_in()
+1. **WordPress Setup**
+   - Install a test WordPress setup on localhost
+2. **Database**
+    - Setup a new database named `storefront` in addition to test WordPress database
+    - Create a table `users`: ID, name, email, contact_no
+    - Create a table `orders`: ID, user_id, subscription_term (user_id of `users` table)
+2. **WordPress Plugin**
+    - Create a new WordPress plugin named `rest-api` under `/wp-content/plugins`
+    - Create the necessary PHP files inside the plugin directory
+3. **Register custom namespace**
+    - Use the `register\_rest\_route` function to create a namespace named `storefront`
+    - Create two routes: One to submit data and another to retrieve the data
+4. **Authentication**
+    - Implement JWT based authentication on above routes.  Do not use `is_user_logged_in`.
+5. **REST APIs**
+    - Implement one REST API endpoint to receive following data in JSON format: `name`, `email`, `contact_no`, `subscription_term`
+    - Ensure proper validation
+    - Store the data in the tables `users` and `orders` of `storefront` DB
+    - Implement another REST API endpoint to fetch all the data from `orders` table
+    - Ensure you do not use `$wpdb` default object to do database operations.  Use core PHP database functions to execute sql queries.
+    - Ensure proper error handling
+6. **Testing**
+    - The APIs should be testable through tools like Postman or curl
+7. **Documentation**
+    - Ensure proper documentation on how to run the project locally
+    - Ensure proper documentation on how to use the REST APIs    
+8. **Requirements**
+    - Please make an effort to use custom PHP code instead of relying on WordPress built-in functions whenever it's feasible
 
 
 
